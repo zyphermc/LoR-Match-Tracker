@@ -94,14 +94,13 @@ public class runeterraCount : MonoBehaviour
                                 break;
                         }
                     }
-                    saveAndLoad.Save(); //save data
                 }
                 else
                 {
                     syncData = true;
                 }
             }
-
+            saveAndLoad.Save(); //save data
             yield return new WaitForSeconds(1f);
         }
     }

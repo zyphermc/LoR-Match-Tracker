@@ -1,4 +1,5 @@
 ﻿[System.Serializable]
+
 public class PlayerData
 {
     #region Data Variables
