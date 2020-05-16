@@ -23,6 +23,9 @@ public class runeterraCount : MonoBehaviour
     public GameObject FrontPage;
     public GameObject StatisticsPage;
 
+    public ProfileStatistics profileStatistics;
+    public SaveAndLoad saveAndLoad;
+
     private int pvp_winCount;
     private int pvp_lossCount;
     private int ai_winCount;
@@ -91,6 +94,7 @@ public class runeterraCount : MonoBehaviour
                                 break;
                         }
                     }
+                    saveAndLoad.Save(); //save data
                 }
                 else
                 {
@@ -176,6 +180,7 @@ public class runeterraCount : MonoBehaviour
     public void increment_pvp_win()
     {
         pvp_winCount++;
+        profileStatistics.pvp_wins++;
     }
 
     public void decrement_pvp_win()
@@ -186,6 +191,7 @@ public class runeterraCount : MonoBehaviour
     public void increment_pvp_loss()
     {
         pvp_lossCount++;
+        profileStatistics.pvp_losses++;
     }
 
     public void decrement_pvp_loss()
@@ -197,6 +203,7 @@ public class runeterraCount : MonoBehaviour
     public void increment_ai_win()
     {
         ai_winCount++;
+        profileStatistics.ai_wins++;
     }
 
     public void decrement_ai_win()
@@ -207,6 +214,7 @@ public class runeterraCount : MonoBehaviour
     public void increment_ai_loss()
     {
         ai_lossCount++;
+        profileStatistics.ai_losses++;
     }
 
     public void decrement_ai_loss()
@@ -218,6 +226,7 @@ public class runeterraCount : MonoBehaviour
     public void increment_friend_win()
     {
         friend_winCount++;
+        profileStatistics.friend_wins++;
     }
 
     public void decrement_friend_win()
@@ -228,6 +237,7 @@ public class runeterraCount : MonoBehaviour
     public void increment_friend_loss()
     {
         friend_lossCount++;
+        profileStatistics.friend_losses++;
     }
 
     public void decrement_friend_loss()

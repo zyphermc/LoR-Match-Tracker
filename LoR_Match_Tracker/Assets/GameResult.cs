@@ -9,9 +9,6 @@ public class GameResult : MonoBehaviour
 {
     public GameResultData data = new GameResultData();
 
-    //public TextMeshProUGUI text_error;
-    public TMP_InputField text_error;
-
     public async Task UpdateData()
     {
         try
@@ -26,7 +23,7 @@ public class GameResult : MonoBehaviour
         }
         catch (Exception e)
         {
-            text_error.text = "Debug Error: " + e;
+            Debug.Log(e);
         }
     }
 }
