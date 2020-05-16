@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 #pragma warning disable 4014
 //#pragma warning restore xxxx
 
@@ -31,12 +32,13 @@ public class runeterraCount : MonoBehaviour
 
     //Server-side values to client side
     [SerializeField] private int currentGameID;
+
     [SerializeField] private bool currentGameResult;
     [SerializeField] private bool syncData;
     [SerializeField] private int gameType;
 
     public GameResult gameResult;
-    
+
     private IEnumerator UpdateDataEnum()
     {
         while (true)
@@ -61,9 +63,11 @@ public class runeterraCount : MonoBehaviour
                             case 0:
                                 increment_pvp_win();
                                 break;
+
                             case 1:
                                 increment_ai_win();
                                 break;
+
                             case 2:
                                 increment_friend_win();
                                 break;
@@ -77,9 +81,11 @@ public class runeterraCount : MonoBehaviour
                             case 0:
                                 increment_pvp_loss();
                                 break;
+
                             case 1:
                                 increment_ai_loss();
                                 break;
+
                             case 2:
                                 increment_friend_loss();
                                 break;
