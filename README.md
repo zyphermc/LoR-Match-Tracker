@@ -6,4 +6,5 @@
 
 ## Using
 * Unity
+* Riot Legends of Runeterra Data Dragon API
 
